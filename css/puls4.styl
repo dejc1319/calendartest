@@ -1,35 +1,103 @@
 gris_oscuro = #444
 azul = #22BCE0
+naranja = #DD4F24
 body
-	backgorund #E8E8E8
+	background #E8E8E8
 	color gris_oscuro
 	font-family Arial
 	font-size 16px 
 header
 	background gris_oscuro
+	box-shadow 0 5px 0 rgba(0,0,0,0.2)
 	color white
 	padding 0.5em
+	position relative
+	overflow hidden
+	z-index 1
 	.logo
 		border-right 1px solid azul
 		width 60px
+		float left
 		img
 			width 52px
 	.titular
-		margin 0 80px 0 70px
+		margin 0 60px 0 70px
+		.filtro
+			color azul
+			font-weight 800
+			font-size 14px
+			font-style italic
+			text-decoration none
+		.publicar
+			background naranja
+			color white
+			margin -0.5em 1em 0 0
+			padding 0.2em 0.5em
+			text-decoration none
+			font-style italic
+			text-shadow 1px 1px 0px black
+			float right
+			
 		.titulo
 			font-size 18px
-			fontweight normal
+			font-weight normal
 			margin 0
 			padding 0
 	.usuario
+		position absolute
+		top 0 
+		right 0
 		.avatar
+			margin 0 1em 0 0
+			position relative
+			z-index 2
 			img
 				border-radius 50%
 				width 50px		
+		.flechita
+			display block
+			background naranja
+			color white
+			position absolute
+			width 50%
+			top 15px
+			right 0
+			padding 3px
+			z-index 0
+			text-align right
 nav 
 	background azul
-.left
-	float left
-.right
-	float right
+	border-left 15px solid white
+	position relative
+	&:before
+		border-bottom 20px solid transparent
+		border-left 7px solid white
+		border-top 20px solid transparent
+		content ""		
+		position absolute
+		top 0 
+		left 0
+	.menu 
+		margin 0
+		overflow-x auto
+		height 40px
+		line-height 40px
+		white-space nowrap
+		text-align left
+		padding 0
+		li 
+			display inline-block
+			
+			a 
+				color white
+				text-decoration none
+				display inline-block
+				margin 0 0.5em
+				padding 0 0.2em
+	
+.posts
+	padding 0.5em
+	
+	.post
+		background white
 	
